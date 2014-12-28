@@ -1,0 +1,23 @@
+<config>
+	<platform>android</platform>
+	<defaultTab>1</defaultTab>
+	<nav>
+		<text>标签1</text>
+		<text>标签2</text>
+		<text>标签3</text>	
+	</nav>
+	<menu>
+		<page>
+			<text>标签1</text>
+			<href>sub1.html</href>
+		</page>
+		<page>
+			<text>标签2</text>
+			<href>sub2.html</href>
+		</page>
+		<page>
+			<text>标签3</text>
+			<href>sub3.html</href>
+		</page>
+	</menu>
+</config>
