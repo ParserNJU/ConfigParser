@@ -37,6 +37,10 @@ public class Util {
 			e.printStackTrace();
 		}
 		
-		Constant.ANDROID_PHONEGAP_FOLDER = Constant.PRE_PROJECT_PATH + Constant.ANDROID_PHONEGAP_FOLDER; 
+		Constant.ANDROID_PHONEGAP_FOLDER = Constant.PRE_PROJECT_PATH + Constant.ANDROID_PHONEGAP_FOLDER;
+		Constant.CONFIG_XML = Constant.PRE_PROJECT_PATH + Constant.CONFIG_XML;
+		Constant.XML_FOLDER = Constant.PRE_PROJECT_PATH + Constant.XML_FOLDER;
+		Constant.FRAMEWORK_FOLDER = Constant.PRE_PROJECT_PATH + Constant.FRAMEWORK_FOLDER;
+		Constant.RESOURCE_FOLDER = Constant.PRE_PROJECT_PATH + Constant.RESOURCE_FOLDER;
 	}
 }

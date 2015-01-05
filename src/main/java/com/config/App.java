@@ -16,21 +16,27 @@ public class App
     	//初始化项目环境
     	Util.initProjectEnviroment();
     	
+    	String frameworkName = "framework1";
     	//选择第一个框架FrameWork1
-    	String sourcePath = Constant.PRE_PROJECT_PATH + Constant.FRAMEWORK_FOLDER + "/FrameWork1";
+    	String sourcePath = Constant.FRAMEWORK_FOLDER + "/" + frameworkName;
+
     	String newPath = Constant.ANDROID_PHONEGAP_FOLDER;
-    	String inputPath = Constant.PRE_PROJECT_PATH + Constant.XML_FOLDER;
-    	String resourcePath = Constant.PRE_PROJECT_PATH + Constant.RESOURCE_FOLDER;
+    	String inputPath = Constant.XML_FOLDER;
+    	String resourcePath = Constant.RESOURCE_FOLDER;
     	
     	//初始化框架环境
-//    	FileUtil.delFolder(newPath);
+    	FileUtil.delFolder(newPath);
     	FileUtil.delFolder(inputPath);
+    	FileUtil.newFolder(newPath);
     	FileUtil.newFolder(inputPath);
+    	
+    	ConfigXmlParser parser = new ConfigXmlParser();
+    	parser.initConfig(frameworkName);
+
+    	
     	FileUtil.copyFolder(sourcePath, newPath);
     	FileUtil.copyFolder(resourcePath, newPath);
     	
     	//解析框架配置文件
-    	ConfigXmlParser parser = new ConfigXmlParser();
-    	parser.initConfig();
-    }
+    	    }
 }

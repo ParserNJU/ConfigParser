@@ -14,9 +14,9 @@ public class Constant {
 	
 	public static String INIT_HTML_FILE = "initHTMLFile.html";
 	public static String PRE_PROJECT_PATH = "";
-	public static String HTML_ENCODE = "GBK";
+	public static String HTML_ENCODE = "UTF-8";
 	
 	public static String METHOD_PROPERTIES = "method.properties";
 	public static String RESOURCE_PROPERTIES = "resource.properties";
-	public static String CONFIG_XML = "config.xml";
+	public static String CONFIG_XML = "/Config_XML";
 }
