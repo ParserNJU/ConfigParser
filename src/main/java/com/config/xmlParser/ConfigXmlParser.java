@@ -22,7 +22,7 @@ import net.sf.json.xml.XMLSerializer;
 
 public class ConfigXmlParser {
 	
-	private String configPath = Constant.PRE_PROJECT_PATH + "/WWW/" + Constant.CONFIG_XML;
+	private String configPath = Constant.ANDROID_PHONEGAP_FOLDER + Constant.CONFIG_XML;
 
 	public void initConfig()
 	{
@@ -61,7 +61,7 @@ public class ConfigXmlParser {
 	
 	private void writeJsonToFile(String str)
 	{
-		File file = new File(Constant.PRE_PROJECT_PATH + "/WWW/config.json");
+		File file = new File(Constant.ANDROID_PHONEGAP_FOLDER+ "config.json");
 		try {
 			
 			if (!file.exists()) {

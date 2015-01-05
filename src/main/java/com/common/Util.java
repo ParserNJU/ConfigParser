@@ -36,12 +36,7 @@ public class Util {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		// 配置输出文件夹
-		String outputPath = Constant.PRE_PROJECT_PATH + Constant.HTML_FOLDER;
-		File file = new File(outputPath);
-		if (!file.exists()) {
-			file.mkdirs();
-		}
+		
+		Constant.ANDROID_PHONEGAP_FOLDER = Constant.PRE_PROJECT_PATH + Constant.ANDROID_PHONEGAP_FOLDER; 
 	}
 }
