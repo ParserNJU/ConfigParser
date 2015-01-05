@@ -18,5 +18,5 @@ public class Constant {
 	
 	public static String METHOD_PROPERTIES = "method.properties";
 	public static String RESOURCE_PROPERTIES = "resource.properties";
-	public static String CONFIG_XML = "config.xml";
+	public static String CONFIG_XML = "/Config_XML";
 }

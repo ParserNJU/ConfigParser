@@ -22,10 +22,13 @@ import net.sf.json.xml.XMLSerializer;
 
 public class ConfigXmlParser {
 	
-	private String configPath = Constant.ANDROID_PHONEGAP_FOLDER + Constant.CONFIG_XML;
+	private String configPath = Constant.CONFIG_XML;
+	private String frameworkName;
 
-	public void initConfig()
+	public void initConfig(String name)
 	{
+		this.frameworkName = name;
+		configPath += "/" + name + ".xml";
 		String xmlStr = this.readFile();
 		String jsonStr = this.xmltoJson(xmlStr);
 		this.writeJsonToFile(jsonStr);
@@ -61,7 +64,7 @@ public class ConfigXmlParser {
 	
 	private void writeJsonToFile(String str)
 	{
-		File file = new File(Constant.ANDROID_PHONEGAP_FOLDER+ "config.json");
+		File file = new File(Constant.FRAMEWORK_FOLDER + "/" + frameworkName + "/frame/json/config.json");
 		try {
 			
 			if (!file.exists()) {
@@ -106,14 +109,14 @@ public class ConfigXmlParser {
 				String fileInitStr = "<MPage id=\"" + fileName + "\">\r\n"+
 									 "</MPage>";
 				
-				FileUtil.newFile(Constant.PRE_PROJECT_PATH + Constant.XML_FOLDER + "/" + fileName, fileInitStr);
+				FileUtil.newFile(Constant.XML_FOLDER + "/" + fileName, fileInitStr);
 				
 			}
 			String dataSourceStr = "<MDataSrc>\r\n" +
 										"<MDataItem>\r\n" +
 										"</MDataItem>\r\n" +
 								   "</MDataSrc>";
-			FileUtil.newFile(Constant.PRE_PROJECT_PATH + Constant.XML_FOLDER + "/data_source.xml", dataSourceStr);
+			FileUtil.newFile(Constant.XML_FOLDER + "/data_source.xml", dataSourceStr);
 			
 		} catch (XmlPullParserException e) {
 			e.printStackTrace();
