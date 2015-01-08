@@ -26,7 +26,7 @@ public class App
     	
     	//初始化框架环境
     	FileUtil.delFolder(newPath);
-    	FileUtil.delFolder(inputPath);
+//    	FileUtil.delFolder(inputPath);
     	FileUtil.newFolder(newPath);
     	FileUtil.newFolder(inputPath);
     	
