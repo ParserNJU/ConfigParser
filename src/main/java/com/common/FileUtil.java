@@ -48,16 +48,17 @@ public class FileUtil {
 			/** 如果文件不存在就建一个新文件 */
 			if (!myFilePath.exists()) {
 				myFilePath.createNewFile();
+				
+				FileWriter resultFile = new FileWriter(myFilePath); // 用来写入字符文件的便捷类,
+				// 在给出 File
+				// 对象的情况下构造一个
+				// FileWriter 对象
+				PrintWriter myFile = new PrintWriter(resultFile); // 向文本输出流打印对象的格式化表示形式,使用指定文件创建不具有自动行刷新的新
+				// PrintWriter。
+				String strContent = fileContent;
+				myFile.println(strContent);
+				resultFile.close();
 			}
-			FileWriter resultFile = new FileWriter(myFilePath); // 用来写入字符文件的便捷类,
-																// 在给出 File
-																// 对象的情况下构造一个
-																// FileWriter 对象
-			PrintWriter myFile = new PrintWriter(resultFile); // 向文本输出流打印对象的格式化表示形式,使用指定文件创建不具有自动行刷新的新
-																// PrintWriter。
-			String strContent = fileContent;
-			myFile.println(strContent);
-			resultFile.close();
 
 		} catch (Exception e) {
 			System.out.println("新建文件操作出错");
