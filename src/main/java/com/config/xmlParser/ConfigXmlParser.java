@@ -35,6 +35,10 @@ public class ConfigXmlParser {
 		this.createXMLFile();
 	}
 	
+/**
+ * 读取框架的xml配置文件
+ * @return
+ */
 	@SuppressWarnings("resource")
 	private String readFile()
 	{
@@ -62,6 +66,10 @@ public class ConfigXmlParser {
         return jsonStr;
     }  
 	
+/**
+ * 把解析到的json文件写到config.json中，用于框架去读写
+ * @param str
+ */
 	private void writeJsonToFile(String str)
 	{
 		File file = new File(Constant.FRAMEWORK_FOLDER + "/" + frameworkName + "/frame/json/config.json");
@@ -81,6 +89,9 @@ public class ConfigXmlParser {
 
 	}
 	
+/**
+ * 查询href中的界面文件，每个界面文件创建一个xml文件<包括：page datasource>
+ */
 	private void createXMLFile()
 	{
 		XmlPullParser xpp = null;
