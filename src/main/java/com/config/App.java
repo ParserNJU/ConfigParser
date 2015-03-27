@@ -16,7 +16,7 @@ public class App
     	//初始化项目环境
     	Util.initProjectEnviroment();
     	
-    	String frameworkName = "framework1";
+    	String frameworkName = "framework2";
     	//选择第一个框架FrameWork1
     	String sourcePath = Constant.FRAMEWORK_FOLDER + "/" + frameworkName;
 
